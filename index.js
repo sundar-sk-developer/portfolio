@@ -42,7 +42,7 @@ app.post('/form',(req,res)=>{
         };
         console.log('Record Inserted Succussfully');
     });
-    return res.redirect('confirm.html');
+    return res.redirect('./confirm.html');
 
 });
 
