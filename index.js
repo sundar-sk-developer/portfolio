@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
     extended:true
 }));
 
-mongoose.connect('mongodb://127.0.0.1:27017/portfolio', {
+mongoose.connect('mongodb+srv://sundarsk001:sundar_2024@cluster0.5shenmr.mongodb.net/portfolio', {
 
 useNewUrlParser:true,
 useUnifiedTopology:true
@@ -36,7 +36,7 @@ app.post('/form',(req,res)=>{
         'message':message
     }
 
-    db.collection('pf-details').insertOne(data,(err,collection)=>{
+    db.collection('details').insertOne(data,(err,collection)=>{
         if(err){
             throw err;
         };
